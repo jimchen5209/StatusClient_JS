@@ -18,7 +18,7 @@ module.exports = class Status {
         if (fs.existsSync(this._path)) {
             fs.writeFile(`${this._path}/${this._filename}.json`, JSON.stringify(this._data), (err) => {
                 if (err) console.log(err)
-            });
+            })
         }
     }
 }
