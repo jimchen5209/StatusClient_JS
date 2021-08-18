@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Client for jimchen5209's status server",
   "main": "dist/status.js",
+  "typings": "./dist/status.d.ts",
   "scripts": {
     "build": "tsc --pretty -d"
   },
