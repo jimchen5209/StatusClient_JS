@@ -5,7 +5,7 @@ const os_1 = require("os");
 const fs_1 = require("fs");
 class Status {
     constructor(name) {
-        this._path = os_1.homedir() + '/.bot_status';
+        this._path = (0, os_1.homedir)() + '/.bot_status';
         this._data = {
             'name': name,
             'pid': process.pid,
@@ -16,8 +16,8 @@ class Status {
     }
     set_status(closed = false) {
         this._data['closed'] = closed;
-        if (fs_1.existsSync(this._path)) {
-            fs_1.writeFile(`${this._path}/${this._filename}.json`, JSON.stringify(this._data), (err) => {
+        if ((0, fs_1.existsSync)(this._path)) {
+            (0, fs_1.writeFile)(`${this._path}/${this._filename}.json`, JSON.stringify(this._data), (err) => {
                 if (err)
                     console.log(err);
             });
