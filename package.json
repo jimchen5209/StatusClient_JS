@@ -5,7 +5,9 @@
   "main": "dist/status.js",
   "typings": "./dist/status.d.ts",
   "scripts": {
-    "build": "tsc --pretty -d"
+    "build": "tsc --pretty -d",
+    "lint": "eslint . --fix",
+    "lint:check": "eslint . --max-warnings 0"
   },
   "repository": {
     "type": "git",
@@ -14,11 +16,13 @@
   "author": "jimchen5209 <jimchen5209@gmail.com>",
   "license": "AGPL-3.0-only",
   "devDependencies": {
-    "@types/node": "^20.17.10",
-    "@typescript-eslint/eslint-plugin": "^7.18.0",
-    "@typescript-eslint/parser": "^7.18.0",
-    "eslint": "^8.57.1",
-    "typescript": "^5.7.2"
+    "@eslint/js": "^9.17.0",
+    "@stylistic/eslint-plugin": "^2.12.1",
+    "@types/node": "^22.10.2",
+    "eslint": "^9.17.0",
+    "globals": "^15.13.0",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.0"
   },
   "bugs": {
     "url": "https://github.com/jimchen5209/StatusClient_JS/issues"
